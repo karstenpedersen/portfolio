@@ -1,6 +1,6 @@
 <script lang="ts">
-	import IconLink from '../icons/IconLink.svelte';
-	import { fiGithub, fiGlobe } from '../icons/icons';
+	import { projects } from '$lib/project.data';
+	import ProjectCard from '../cards/ProjectCard.svelte';
 	import Section from '../layout/Section.svelte';
 </script>
 
@@ -14,17 +14,8 @@
 
 	<!-- TODO - MAKE SLIDER ON MOBILE -->
 	<div class="flex sm:grid sm:grid-cols-2 gap-6 sm:wrapper overflow-x-auto snap-mandatory snap-x">
-		{#each new Array(6) as _, i}
-			<div class="snap-center relative object-cover flex-none">
-				<img src="/images/blue-water.jpg" alt="Black water" class="object-cover" />
-				<div class="">
-					<a href="/" class="text-xl font-semibold uppercase">Title</a>
-					<ul class="flex gap-4">
-						<li><IconLink startIcon={fiGlobe} /></li>
-						<li><IconLink startIcon={fiGithub} /></li>
-					</ul>
-				</div>
-			</div>
+		{#each projects as project, i}
+			<ProjectCard {project} />
 		{/each}
 	</div>
 </Section>

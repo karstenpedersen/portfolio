@@ -9,10 +9,6 @@
 		--clr-accent-variant: #000000;
 		--clr-on-accent: #000000;
 
-		--clr-error: #000000;
-		--clr-on-error: #000000;
-		--clr-error-variant: #000000;
-
 		--clr-dark: #000000;
 		--clr-light: #ffffff;
 		--clr-gray: #636363;
@@ -40,6 +36,10 @@
 	li,
 	a {
 		@apply font-paragraph leading-6;
+	}
+
+	a {
+		@apply hover:text-gray transition-colors;
 	}
 
 	h1,
@@ -70,6 +70,6 @@
 
 @layer utilities {
 	.wrapper {
-		@apply w-[90vw] max-w-[70rem] mx-auto;
+		@apply w-[90vw] max-w-[60rem] mx-auto;
 	}
 }

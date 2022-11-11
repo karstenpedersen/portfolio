@@ -2,7 +2,7 @@
 	import Section from '../layout/Section.svelte';
 </script>
 
-<Section id="hero">
+<Section id="hero" snap={false} class="!sticky top-0">
 	<!-- Background image -->
 	<slot slot="background">
 		<img

@@ -4,17 +4,11 @@
 
 <!-- https://raw.githubusercontent.com/karstenpedersen/K-Theme/main/README.md -->
 
-<Section id="skills">
-	<div class="grid sm:grid-cols-2 gap-6 mb-12 wrapper">
-		<h1>Skills</h1>
-		<p class="text-gray text-lg">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, natus?
-		</p>
-	</div>
+<Section id="skills" light>
 	<div class="grid sm:grid-cols-2 gap-6">
 		<div>
 			<div class="sticky top-20">
-				<h1 class="">Web dev</h1>
+				<h1>Skills</h1>
 			</div>
 		</div>
 		<div class="space-y-14">

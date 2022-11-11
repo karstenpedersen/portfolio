@@ -41,7 +41,9 @@ export type IconNames =
 	| 'fiFile'
 	| 'fiArrowRight'
 	| 'fiLink'
-	| 'fiMenu';
+	| 'fiMenu'
+	| 'fiDownload'
+	| 'fiTwitter';
 
 export const icons: Record<IconNames, IconDefinition> = {
 	fiGithub: {
@@ -203,6 +205,35 @@ export const icons: Record<IconNames, IconDefinition> = {
 			{ tag: 'line', props: { x1: '3', y1: '6', x2: '21', y2: '6' } },
 			{ tag: 'line', props: { x1: '3', y1: '18', x2: '21', y2: '18' } }
 		]
+	},
+	fiDownload: {
+		family: 'feather-icons',
+		fill: false,
+		stroke: 'currentColor',
+		strokeWidth: 2,
+		strokeLinecap: 'round',
+		strokeLinejoin: 'round',
+		tags: [
+			{ tag: 'path', props: { d: 'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4' } },
+			{ tag: 'polyline', props: { points: '7 10 12 15 17 10' } },
+			{ tag: 'line', props: { x1: '12', y1: '15', x2: '12', y2: '3' } }
+		]
+	},
+	fiTwitter: {
+		family: 'feather-icons',
+		fill: false,
+		stroke: 'currentColor',
+		strokeWidth: 2,
+		strokeLinecap: 'round',
+		strokeLinejoin: 'round',
+		tags: [
+			{
+				tag: 'path',
+				props: {
+					d: 'M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z'
+				}
+			}
+		]
 	}
 };
 
@@ -216,7 +247,9 @@ const {
 	fiLink,
 	fiLinkedin,
 	fiMail,
-	fiMenu
+	fiMenu,
+	fiDownload,
+	fiTwitter
 } = icons;
 
 export {
@@ -229,5 +262,7 @@ export {
 	fiLink,
 	fiLinkedin,
 	fiMail,
-	fiMenu
+	fiMenu,
+	fiDownload,
+	fiTwitter
 };
