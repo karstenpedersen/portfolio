@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		/* Default colors */
+		--clr-accent: #000000;
+		--clr-accent-variant: #000000;
+		--clr-on-accent: #000000;
+
+		--clr-error: #000000;
+		--clr-on-error: #000000;
+		--clr-error-variant: #000000;
+
+		--clr-dark: #000000;
+		--clr-light: #ffffff;
+		--clr-gray: #636363;
+
+		--clr-background: var(--clr-dark);
+		--clr-on-background: var(--clr-light);
+		--clr-surface: #000000;
+		--clr-on-surface: #000000;
+
+		/* Heights */
+		--header-height: 75px;
+		--scroll-padding: var(--header-height);
+	}
+
+	html {
+		@apply scroll-smooth scroll-pt-0 snap-y snap-proximity;
+	}
+
+	body {
+		@apply bg-dark text-light;
+	}
+
+	div,
+	p,
+	li,
+	a {
+		@apply font-paragraph leading-6;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-heading font-semibold uppercase;
+	}
+
+	h1 {
+		@apply text-5xl;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+
+	h3 {
+		@apply text-2xl;
+	}
+
+	mark {
+		@apply bg-light px-1 pt-2 text-dark;
+	}
+}
+
+@layer utilities {
+	.wrapper {
+		@apply w-[90vw] max-w-[70rem] mx-auto;
+	}
+}
