@@ -1,7 +1,6 @@
-import type { IconDefinition } from './components/icons/icons';
-
 export type Project = {
 	id: string;
+	type: string;
 	title: string;
 	description: string;
 	tags: string[];
@@ -10,6 +9,6 @@ export type Project = {
 };
 
 export type Link = {
-	icon: IconDefinition;
+	iconName: string;
 	url: string;
 };

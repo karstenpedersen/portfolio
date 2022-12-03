@@ -1,7 +1,5 @@
 <script lang="ts">
 	import IconLink from '$lib/components/icons/IconLink.svelte';
-	import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-	import { faEnvelope, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <header class="wrapper">
@@ -12,10 +10,10 @@
 	</h1>
 
 	<div class="grid text-xl max-w-max gap-3 grid-cols-2 sm:gap-y-4 sm:gap-x-6">
-		<IconLink href="/" text="Github" startIcon={faGithub} />
-		<IconLink href="/" text="LinkedIn" startIcon={faLinkedinIn} />
-		<IconLink href="/" text="Email" startIcon={faEnvelope} />
-		<IconLink href="/" text="Resume" startIcon={faFileAlt} />
+		<IconLink href="/" text="Github" startIcon="github" />
+		<IconLink href="/" text="LinkedIn" startIcon="linkedin" />
+		<IconLink href="/" text="Email" startIcon="mail" />
+		<IconLink href="/" text="Resume" startIcon="download" />
 	</div>
 </header>
 

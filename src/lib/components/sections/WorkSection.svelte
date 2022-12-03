@@ -13,7 +13,7 @@
 	</div>
 
 	<!-- TODO - MAKE SLIDER ON MOBILE -->
-	<div class="flex sm:grid sm:grid-cols-2 gap-6 sm:wrapper overflow-x-auto snap-mandatory snap-x">
+	<div class="flex sm:grid sm:grid-cols-2 gap-6 wrapper overflow-x-auto snap-mandatory snap-x">
 		{#each projects as project, i}
 			<ProjectCard {project} />
 		{/each}

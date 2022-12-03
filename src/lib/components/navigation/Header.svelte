@@ -2,7 +2,6 @@
 	import Logo from '../brand/Logo.svelte';
 	import Socials from '../brand/Socials.svelte';
 	import Icon from '../icons/Icon.svelte';
-	import { fiMenu } from '../icons/icons';
 	import Navigation from './Navigation.svelte';
 
 	let lastScrollY = 0;
@@ -38,17 +37,20 @@
 
 <header class:hide class:background>
 	<Logo />
-	<div class="hidden items-center gap-4 md:flex">
+
+	<div class="header--desktop">
 		<Navigation
 			class="flex gap-10 text-right text-lg font-semibold  xl:absolute xl:top-8 xl:right-10 xl:flex-col xl:gap-4"
 			{toggleMobileNav}
 		/>
-		<span class="inline-block h-4 w-[2px] rounded-full bg-gray xl:hidden" />
-		<Socials class="flex gap-4 text-xl xl:hidden" />
+
+		<span class="divider" />
+
+		<Socials class="flex gap-4 text-2xl xl:hidden" />
 	</div>
 
-	<button on:click={toggleMobileNav} class="flex flex-col items-end gap-3 md:hidden text-3xl">
-		<Icon icon={fiMenu} />
+	<button on:click={toggleMobileNav} class="header--mobile">
+		<Icon name="menu" />
 	</button>
 </header>
 
@@ -63,5 +65,17 @@
 
 	.background {
 		@apply bg-dark;
+	}
+
+	.header--desktop {
+		@apply hidden items-center gap-4 md:flex;
+	}
+
+	.divider {
+		@apply inline-block h-4 w-[2px] rounded-full bg-gray xl:hidden;
+	}
+
+	.header--mobile {
+		@apply gap-3 md:hidden text-4xl;
 	}
 </style>

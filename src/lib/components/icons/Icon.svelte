@@ -1,33 +1,33 @@
 <script lang="ts">
-	import type { IconDefinition } from './icons';
+	import feather from 'feather-icons';
 
-	export let icon: IconDefinition;
+	export let name: string;
+	export let strokeWidth: number = 2;
+	export let stroke: string = 'currentColor';
+	export let width = '1em';
+	export let height = '1em';
 
-	export let fill = 'none';
-	export let stroke = 'currentColor';
+	$: icon = feather.icons[name];
 
-	let clazz = '';
-	export { clazz as class };
+	$: if (icon) {
+		if (stroke) icon.attrs['stroke'] = stroke;
+		if (strokeWidth) icon.attrs['stroke-width'] = strokeWidth;
+	}
 </script>
 
-<svg
-	class={clazz}
-	width="24"
-	height="24"
-	viewBox="0 0 24 24"
-	stroke-width="2"
-	{fill}
-	{stroke}
-	xmlns="http://www.w3.org/2000/svg"
->
-	{#each icon.tags as tag}
-		<svelte:element this={tag.tag} {...tag.props} />
-	{/each}
-</svg>
+{#if icon}
+	<svg {...icon.attrs} style="width: {width}; height: {height};">
+		<g>
+			{@html icon.contents}
+		</g>
+	</svg>
+{/if}
 
 <style>
 	svg {
-		position: relative;
-		display: inline-block;
+		width: 1em;
+		height: 1em;
+		overflow: visible;
+		transform-origin: 50% 50%;
 	}
 </style>

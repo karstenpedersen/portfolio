@@ -5,9 +5,7 @@
 	import WorkSection from '$lib/components/sections/WorkSection.svelte';
 </script>
 
-<div class="relative h-[1px] snap-start overflow-hidden bg-transparent text-dark">
-	Karsten Pedersen
-</div>
+<div class="relative h-[1px] snap-start opacity-0">Karsten Pedersen</div>
 
 <HeroSection />
 <AboutSection />

@@ -1,10 +1,9 @@
 <script lang="ts">
-	import type { IconDefinition } from './icons';
 	import IconText from './IconText.svelte';
 
 	export let text: string = '';
-	export let startIcon: IconDefinition | null = null;
-	export let endIcon: IconDefinition | null = null;
+	export let startIcon: string = '';
+	export let endIcon: string = '';
 	export let href = '';
 	let clazz = '';
 	export { clazz as class };
